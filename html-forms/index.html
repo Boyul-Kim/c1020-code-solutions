@@ -8,9 +8,9 @@
 <body>
   <h1>Coding Form!</h1>
   <form action="get">
-    <label>Email</label>
+    <label for="email">Email</label>
     <div>
-      <input type="email">
+      <input id="email" type="email">
     </div>
 
     <label for="dropDown">Why is coding cool?</label>
@@ -23,16 +23,16 @@
       </select>
     </div>
 
-    <label for="radio">Favorite Language (choose one)</label>
-    <div id="radio">
-      <input type="radio" value="HTML"> HTML
-      <input type="radio" value="CSS"> CSS
-      <input type="radio" value="JavaScript"> JavaScript
+    <p>Favorite Language (choose one)</p>
+    <div>
+      <input id="HTML" type="radio" value="HTML"> <label for="HTML">HTML</label>
+      <input id="CSS" type="radio" value="CSS"> <label for="CSS">CSS</label>
+      <input id="javascript" type="radio" value="JavaScript"> <label for="javascript">JavaScript</label>
     </div>
 
     <label for="checkbox">Would you like to sign up for more information?</label>
     <div>
-      <input id="checkbox" type="checkbox"> Sign me up!
+      <input id="checkbox" type="checkbox"> <label for="checkbox">Sign me up!</label>
     </div>
 
     <label for="comments">Comments</label>
