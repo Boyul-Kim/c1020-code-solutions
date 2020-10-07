@@ -1,0 +1,11 @@
+body{
+  line-height: 1.5rem;
+}
+
+.bodyOne {
+  font-family: 'Anton', sans-serif;
+}
+
+.bodyTwo {
+  font-family: 'Dancing Script', cursive;
+}
