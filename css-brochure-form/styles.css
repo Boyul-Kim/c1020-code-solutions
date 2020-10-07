@@ -1,0 +1,55 @@
+body {
+  font-family: 'Brandon Grotesque', Arial, Verdana, Tahoma, sans-serif;
+}
+
+.box {
+  width: 25rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  color: rgb(236, 92, 87);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+label {
+  font-weight: bold;
+  color: rgb(61, 61, 61);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.input {
+  margin-bottom: 0.3rem;
+}
+
+input,
+select {
+  border: 1px solid darkgrey;
+  border-radius: 0.4rem;
+  width: 25rem;
+  height: 2.3rem;
+}
+
+input {
+  text-indent: 0.5rem;
+}
+
+select {
+  background-color: rgb(246, 245, 245);
+}
+
+button {
+  background-color: rgb(236, 93, 87);
+  color: white;
+  float: right;
+  width: 6rem;
+  height: 2.1rem;
+  border-style: none;
+  border-radius: 1rem;
+  margin-top: 0.2rem;
+}
