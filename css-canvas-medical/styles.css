@@ -1,0 +1,226 @@
+body {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Tiempos Headline', 'Avenir', Arial, Helvetica, sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.row-header {
+  border-bottom: 1pt solid darkgray;
+  margin-bottom: 4rem;
+}
+
+.column-fourty {
+  width: 40%;
+}
+
+.column-sixty {
+  width: 60%;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.logo > img {
+  width: 25%;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navigation button {
+  background-color: rgb(40, 69, 99);
+  color: white;
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.link {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
+}
+
+.emr {
+  position: relative;
+  align-content: center;
+  width: 100%;
+}
+
+.emr-imageContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+.emr-imageContainer-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./images/hero.jpg);
+  background-size: cover;
+  opacity: 0.9;
+  background-color: rgb(165, 164, 164);
+  height: 550px;
+}
+
+.emr-textContainer {
+  font-size: large;
+  color: white;
+  position: absolute;
+  bottom: 9rem;
+  left: 10rem;
+  width: 40%;
+}
+
+.emr-button {
+  position: absolute;
+  bottom: 5rem;
+  left: 10rem;
+}
+
+.emr-button > button {
+  width: 12rem;
+  height: 3rem;
+  background-color: rgb(40, 69, 99);
+  color: white;
+  border: none;
+  font-size: large;
+  border-radius: 0.25rem;
+}
+
+.clinicians-row {
+  background-color: rgb(250, 250, 250);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.clinicians-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.clinicians-textContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.clinicians-textContainer > p {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clinicians-location-column {
+  flex-basis: 50%;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.clinicians-location-column > p {
+  line-height: 2rem;
+}
+
+.schedule {
+  position: relative;
+  left: 5rem;
+  margin-bottom: 3rem;
+}
+
+.schedule-button {
+  margin-bottom: 3rem;
+}
+
+.schedule-button > button {
+  position: relative;
+  left: 20rem;
+  top: 2rem;
+  width: 12rem;
+  height: 3rem;
+  background-color: rgb(40, 69, 99);
+  color: white;
+  border: none;
+  font-size: large;
+  border-radius: 0.25rem;
+}
+
+.rowAddress {
+  background-color: rgb(82, 82, 80);
+  color: white;
+}
+
+.canvasAddress {
+  width: 50%;
+}
+
+.canvasAddress-imageContainer {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 7rem;
+  width: 60%;
+}
+
+.canvasAddress-imageContainer > img {
+  height: 50%;
+  width: 50%;
+}
+
+.canvasAddressText {
+  margin-left: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+.canvasCompany {
+  flex-basis: 25%;
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+}
+
+.canvasProduct {
+  flex-basis: 25%;
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+}
+
+.footer p {
+  margin-left: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
