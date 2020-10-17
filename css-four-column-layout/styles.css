@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(250, 250, 250);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 900%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column-fourth {
+  width: 25%;
+}
+
+.imageContainer {
+  width: 100%;
+}
+
+.images-actual {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageContainer2 {
+  width: 100%;
+}
+
+.images-icon {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.images-icon > img {
+  width: 100%;
+}
+
+.textContainer {
+  text-align: center;
+}
+
+.textContainer > h2 {
+  margin-bottom: 2.5rem;
+}
+
+.textContainer p {
+  font-size: large;
+}
