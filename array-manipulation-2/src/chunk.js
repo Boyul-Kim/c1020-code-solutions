@@ -1,16 +1,17 @@
 /* eslint-disable no-unused-vars */
 function chunk(array, size) {
-  var newArray1 = [];
-  var newArray2 = [];
+  var arrayCopy = array;
   var totalArray = [];
-  for (var i = 0; i <= array.length - 1; i++) {
-    if (i < size) {
-      newArray1.push(array[i]);
-    } else if (i >= size) {
-      newArray2.push(array[i]);
+  for (var i = 0; i < (array.length / size); i++) {
+    var chunkArray = [];
+
+    for (var x = 0; x < array.length / (array.length / size); x++) {
+      chunkArray.push(arrayCopy[x]);
+      delete arrayCopy[x];
+      // console.log(chunkArray);
     }
+    totalArray.push(chunkArray);
   }
-  totalArray.push(newArray1);
-  totalArray.push(newArray2);
+
   return totalArray;
 }
