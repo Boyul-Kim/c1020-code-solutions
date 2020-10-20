@@ -1,0 +1,39 @@
+body {
+  max-width: 1250px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-light {
+  background-color: rgb(254, 250, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container-dark {
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.lightbulb-light {
+  background-color: rgb(249, 234, 131);
+  height: 250px;
+  width: 250px;
+  border-radius: 8rem;
+}
+
+.lightbulb-dark {
+  background-color: rgb(36, 36, 36);
+  height: 250px;
+  width: 250px;
+  border-radius: 8rem;
+  box-shadow: 0 -16px 0 0 rgb(12, 12, 12);
+}
