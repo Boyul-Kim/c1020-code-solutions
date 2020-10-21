@@ -1,0 +1,62 @@
+body {
+  max-width: 1250px;
+}
+
+.container {
+  width: 100%;
+}
+
+.containerDark {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.modalButton {
+  background-color: rgb(74, 74, 234);
+  color: white;
+  border: none;
+  border-color: rgb(74, 74, 234);
+  width: 15%;
+  height: 40px;
+  font-size: large;
+  border-radius: 0.3rem;
+}
+
+.ghost {
+  display: none;
+}
+
+.popUp {
+  width: 100%;
+  height: 100%;
+}
+
+.popUpText {
+  background-color: white;
+  position: fixed;
+  width: 450px;
+  height: 200px;
+  top: 30%;
+  right: 50%;
+  left: 30%;
+}
+
+.popUpText h2 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.no {
+  background-color: rgb(235, 93, 92);
+  border-radius: 0.3rem;
+  font-size: large;
+  text-transform: uppercase;
+  color: white;
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 1rem;
+  height: 40px;
+  border: none;
+}
