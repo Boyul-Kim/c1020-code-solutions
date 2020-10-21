@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 40px;
+}
