@@ -1,0 +1,66 @@
+body {
+  max-width: 1250px;
+}
+
+.container {
+  width: 100%;
+}
+
+.containerDark {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.modalButton {
+  background-color: rgb(74, 74, 234);
+  color: white;
+  border: none;
+  border-color: rgb(74, 74, 234);
+  width: 15%;
+  height: 40px;
+  font-size: large;
+  border-radius: 0.3rem;
+}
+
+.ghost {
+  display: none;
+}
+
+.popUp {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.popUpText {
+  background-color: white;
+  width: 30%;
+  height: 30%;
+  margin: auto;
+}
+
+.popUpText h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+.no {
+  background-color: rgb(235, 93, 92);
+  border-radius: 0.3rem;
+  font-size: large;
+  text-transform: uppercase;
+  color: white;
+  width: 20%;
+  height: 40px;
+  border: none;
+}
