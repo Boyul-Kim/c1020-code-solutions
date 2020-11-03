@@ -33,10 +33,6 @@ Account.prototype.withdraw = function (amount) {
 Account.prototype.getBalance = function () {
   var availableFunds = 0;
 
-  if (this.transactions.length === 0) {
-    return 0;
-  }
-
   for (var i = 0; i <= this.transactions.length - 1; i++) {
     if (this.transactions[i].type === 'deposit') {
       availableFunds += this.transactions[i].amount;
