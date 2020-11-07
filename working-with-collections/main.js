@@ -35,6 +35,9 @@ playerGroup.push(player2);
 playerGroup.push(player3);
 playerGroup.push(player4);
 
+var playerGroupTie = [];
+var tieGame = false;
+
 // create function to shuffle deck
 function shuffleDeck(deck) {
   for (var i = 0; i <= deck.length - 1; i++) {
@@ -46,7 +49,7 @@ function shuffleDeck(deck) {
   }
 }
 
-function dealCards() {
+function dealCards(playerGroup) {
   var playDeck = createDeck();
   shuffleDeck(playDeck);
   for (var i = 0; i <= playerGroup.length - 1; i++) {
@@ -99,6 +102,7 @@ function determineWinner(playerGroup) {
   for (var a = 0; a <= playerGroup.length - 1; a++) {
     if (playerGroup[a].points === winnerPoints) {
       tie++;
+      playerGroupTie.push(playerGroup[a]);
     }
   }
 
@@ -106,6 +110,7 @@ function determineWinner(playerGroup) {
     console.log(winner, 'won!');
   } else {
     console.log('tie!');
+    tieGame = true;
   }
 
 }
@@ -118,10 +123,14 @@ function resetPoints(playerGroup) {
 }
 
 // simulates actual game
-function playGame() {
-  resetPoints(playerGroup);
-  dealCards();
-  determineWinner(playerGroup);
+function playGame(group) {
+  resetPoints(group);
+  dealCards(group);
+  determineWinner(group);
 }
 
-playGame();
+playGame(playerGroup);
+
+if (tieGame === true) {
+  playGame(playerGroupTie);
+}
