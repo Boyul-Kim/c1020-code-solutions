@@ -1,5 +1,8 @@
 /* global _ */
 /* eslint-disable no-console */
+
+// Note: Decided to try challenge without the use of Lodash - Will come back in future to try again utilizing Lodash
+
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 
 // create deck of cards
@@ -29,11 +32,11 @@ var player2 = new Player('Superman', []);
 var player3 = new Player('Wonder Woman', []);
 var player4 = new Player('Flash', []);
 
-var playerGroup = [];
-playerGroup.push(player1);
-playerGroup.push(player2);
-playerGroup.push(player3);
-playerGroup.push(player4);
+var playerGroupFull = [];
+playerGroupFull.push(player1);
+playerGroupFull.push(player2);
+playerGroupFull.push(player3);
+playerGroupFull.push(player4);
 
 var playerGroupTie = [];
 var tieGame = false;
@@ -102,7 +105,7 @@ function determineWinner(playerGroup) {
   for (var a = 0; a <= playerGroup.length - 1; a++) {
     if (playerGroup[a].points === winnerPoints) {
       tie++;
-      playerGroupTie.push(playerGroup[a]);
+      playerGroupTie.push(new Player(playerGroup[a].name, []));
     }
   }
 
@@ -112,7 +115,6 @@ function determineWinner(playerGroup) {
     console.log('tie!');
     tieGame = true;
   }
-
 }
 
 // all points go back to zero for next round
@@ -129,8 +131,10 @@ function playGame(group) {
   determineWinner(group);
 }
 
-playGame(playerGroup);
+playGame(playerGroupFull);
 
 if (tieGame === true) {
+  console.log('enter tie game');
   playGame(playerGroupTie);
 }
+console.log('game ended');
