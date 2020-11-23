@@ -7,7 +7,7 @@ function capitalizeWord(word) {
     var script = newWord.slice(5, newWord.length);
     var capitalS = newWord[4].toUpperCase();
     var JavaScript = capitalJ + java + capitalS + script;
-    word = JavaScript;
+    word = 'JavaScript';
   } else {
     var upperCaseLetter = newWord[0].toUpperCase();
     var restOfLetters = newWord.slice(1, newWord.length);
