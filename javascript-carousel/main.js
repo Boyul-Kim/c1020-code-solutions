@@ -6,48 +6,50 @@ var dataView = document.querySelectorAll('[data-view]');
 
 var interval = setInterval(arrowMoveRight, 3000);
 
+var data = {
+  index: ''
+};
+
 function arrowMoveLeft() {
-  var index = null;
   for (var i = 0; i <= $imageStorage.length - 1; i++) {
     if (!$imageStorage[i].className.includes('hidden')) {
-      index = i;
+      data.index = i;
     }
   }
 
-  if (index === 0) {
+  if (data.index === 0) {
     $imageStorage[0].classList.add('hidden');
     $imageStorage[$imageStorage.length - 1].classList.remove('hidden');
     $buttonStorage[0].classList.remove('switchButtonCurrent');
     $buttonStorage[$imageStorage.length - 1].classList.add('switchButtonCurrent');
   } else {
-    $imageStorage[index].classList.add('hidden');
-    $imageStorage[index - 1].classList.remove('hidden');
-    $buttonStorage[index].classList.remove('switchButtonCurrent');
-    $buttonStorage[index - 1].classList.add('switchButtonCurrent');
+    $imageStorage[data.index].classList.add('hidden');
+    $imageStorage[data.index - 1].classList.remove('hidden');
+    $buttonStorage[data.index].classList.remove('switchButtonCurrent');
+    $buttonStorage[data.index - 1].classList.add('switchButtonCurrent');
   }
   clearInterval(interval);
   interval = setInterval(arrowMoveRight, 3000);
 }
 
 function arrowMoveRight() {
-  var index = null;
   for (var i = 0; i <= $imageStorage.length - 1; i++) {
     if (!$imageStorage[i].className.includes('hidden')) {
-      index = i;
+      data.index = i;
     }
   }
 
-  if (index === $imageStorage.length - 1) {
+  if (data.index === $imageStorage.length - 1) {
     $imageStorage[$imageStorage.length - 1].classList.add('hidden');
     $imageStorage[0].classList.remove('hidden');
     $buttonStorage[$imageStorage.length - 1].classList.remove('switchButtonCurrent');
     $buttonStorage[0].classList.add('switchButtonCurrent');
 
   } else {
-    $imageStorage[index].classList.add('hidden');
-    $imageStorage[index + 1].classList.remove('hidden');
-    $buttonStorage[index].classList.remove('switchButtonCurrent');
-    $buttonStorage[index + 1].classList.add('switchButtonCurrent');
+    $imageStorage[data.index].classList.add('hidden');
+    $imageStorage[data.index + 1].classList.remove('hidden');
+    $buttonStorage[data.index].classList.remove('switchButtonCurrent');
+    $buttonStorage[data.index + 1].classList.add('switchButtonCurrent');
   }
   clearInterval(interval);
   interval = setInterval(arrowMoveRight, 3000);
@@ -63,19 +65,17 @@ function hideAll() {
 
 function switchButtonIcon(event) {
   var buttonIndex = Number(event.target.value);
-
-  for (var index = 0; index <= $buttonStorage.length - 1; index++) {
-    if (index !== buttonIndex) {
-      $buttonStorage[index].classList.remove('switchButtonCurrent');
+  for (var i = 0; i <= $buttonStorage.length - 1; i++) {
+    if (i !== buttonIndex) {
+      $buttonStorage[i].classList.remove('switchButtonCurrent');
     } else {
-      $buttonStorage[index].classList.add('switchButtonCurrent');
+      $buttonStorage[i].classList.add('switchButtonCurrent');
       hideAll();
-      $imageStorage[index].classList.remove('hidden');
+      $imageStorage[i].classList.remove('hidden');
       clearInterval(interval);
       interval = setInterval(arrowMoveRight, 3000);
     }
   }
-
 }
 
 $leftArrow.addEventListener('click', arrowMoveLeft);
