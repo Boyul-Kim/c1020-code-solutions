@@ -21,7 +21,7 @@ app.post('/api/grades', function (req, res) {
   nextId++;
 
   grades.push(newGrade);
-  res.sendStatus(201);
+  res.status(201).send(newGrade);
 });
 
 app.listen(3000, () => {
