@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 const grades = [];
 let nextId = 1;
+
+app.use(express.json());
 
 app.get('/api/grades', function (req, res) {
   res.json(grades);
