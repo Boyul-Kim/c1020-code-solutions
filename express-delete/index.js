@@ -21,6 +21,11 @@ app.get('/api/grades', function (req, res) {
 });
 
 app.delete('/api/grades/:grade', function (req, res) {
+  for (let i = 0; i <= arrayObjects.length - 1; i++) {
+    if (arrayObjects[i].grade === Number(req.params.grade)) {
+      arrayObjects.splice(i, 1);
+    }
+  }
   res.sendStatus(204);
 });
 
