@@ -18,16 +18,8 @@
       "content": "A closure is formed when a function retains access to variables in its lexical scope."
     },
     "6": {
-      "content": "testing",
+      "content": "update",
       "id": 6
-    },
-    "9": {
-      "id": 9,
-      "content": "testingPUT2"
-    },
-    "10": {
-      "content": "note",
-      "id": 10
     }
   }
 }
