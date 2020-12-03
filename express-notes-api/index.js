@@ -15,10 +15,6 @@ app.get('/api/notes', function (req, res) {
 });
 
 app.get('/api/notes/:id', function (req, res) {
-  const dataArray = [];
-  for (const key in data.notes) {
-    dataArray.push(data.notes[key]);
-  }
 
   if (isNaN(Number(req.params.id))) {
     res.status(400).send({ error: 'id must be a positive integer' });
