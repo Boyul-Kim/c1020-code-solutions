@@ -36,9 +36,8 @@ const balance = account.reduce(balanceReducer, 0);
 console.log(balance);
 
 const compositeReducer = (accumulator, currentValue) => {
-  for (const key in currentValue) {
-    return accumulator + currentValue[key];
-  }
+  const target = Object.assign(accumulator, currentValue);
+  return target;
 };
-const composite = traits.reduce(compositeReducer, 0);
+const composite = traits.reduce(compositeReducer);
 console.log(composite);
