@@ -19,10 +19,10 @@ const traits = [
   { trainer: 'ash' }
 ];
 
-const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 console.log(sum);
 
-const product = numbers.reduce((accumulator, currentValue) => accumulator * currentValue);
+const product = numbers.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
 console.log(product);
 
 const balanceReducer = (accumulator, currentValue) => {
@@ -39,5 +39,5 @@ const compositeReducer = (accumulator, currentValue) => {
   const target = Object.assign(accumulator, currentValue);
   return target;
 };
-const composite = traits.reduce(compositeReducer);
+const composite = traits.reduce(compositeReducer, {}); // best to add the initial value
 console.log(composite);
