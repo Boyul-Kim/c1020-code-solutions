@@ -27,7 +27,12 @@ app.get('/api/grades', (req, res, next) => {
 });
 
 app.post('/api/grades', (req, res, err) => {
-  const text = 'insert into "grades"("name", "course", "score") values($1, $2, $3) returning *;';
+  const text = `
+    insert into "grades"("name", "course", "score")
+    values($1, $2, $3)
+    returning *;
+  `;
+
   const values = [req.body.name, req.body.course, req.body.score];
   if (req.body.score > 100 || req.body.score < 1) {
     res.status(400).json({ error: 'score is not between 1-100' });
@@ -49,8 +54,18 @@ app.post('/api/grades', (req, res, err) => {
 
 app.put('/api/grades/:gradeId', (req, res, err) => {
 
-  const text = 'update "grades" set "name" = $1, "course" = $2, "score" = $3 where "gradeId" = $4';
-  const values = [req.body.name, req.body.course, Number(req.body.score), Number(req.params.gradeId)];
+  const gradeId = parseInt(req.params.gradeId, 10);
+
+  const text = `
+    update "grades"
+      set "name" = $1,
+          "course" = $2,
+          "score" = $3
+      where "gradeId" = $4
+      returning *
+  `;
+
+  const values = [req.body.name, req.body.course, Number(req.body.score), gradeId];
 
   if (req.body.name === undefined || req.body.course === undefined || req.body.score === undefined || isNaN(Number(req.params.gradeId))) {
     res.status(400).json({ error: 'missing entry or invalide gradeId' });
@@ -74,7 +89,12 @@ app.put('/api/grades/:gradeId', (req, res, err) => {
 });
 
 app.delete('/api/grades/:gradeId', (req, res, err) => {
-  const text = 'delete from "grades" where "gradeId" = $1;';
+  const text = `
+    delete from "grades"
+    where "gradeId" = $1
+    returning *;
+  `;
+
   const values = [Number(req.params.gradeId)];
 
   if (isNaN(Number(req.params.gradeId))) {
