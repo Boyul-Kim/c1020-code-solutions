@@ -1,0 +1,26 @@
+.dark-purple {
+  background-color: rgb(58, 28, 117);
+  color: white;
+}
+
+.purple {
+  background-color: rgb(107, 63, 195);
+  color: white;
+}
+
+.pink {
+  background-color: rgb(235, 93, 92);
+  color: white;
+}
+
+.orange {
+  background-color: rgb(235, 168, 92);
+}
+
+.yellow {
+  background-color: rgb(243, 231, 67);
+}
+
+.white {
+  background-color: white;
+}
