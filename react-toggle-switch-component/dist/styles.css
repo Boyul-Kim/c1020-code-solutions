@@ -1,0 +1,32 @@
+div {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 45%;
+  border: solid 0.5px black;
+}
+
+.background-on {
+  background-color: green;
+}
+
+.background-off {
+  background-color: lightgray;
+}
+
+.on {
+  width: 50%;
+  height: 100%;
+  border-radius: 90%;
+  position: absolute;
+  left: 1.5rem;
+  outline: none;
+}
+
+.off {
+  width: 50%;
+  height: 100%;
+  border-radius: 90%;
+  position: absolute;
+  outline: none;
+}
