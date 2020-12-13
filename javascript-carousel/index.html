@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="width15">
+        <i class="fas fa-angle-double-left fa-5x"></i>
+      </div>
+
+      <div class="imageContainer imageStorage width70">
+        <img src="images/001.png" alt="">
+      </div>
+
+      <div class="imageContainer imageStorage width70 hidden">
+        <img src="images/004.png" alt="">
+      </div>
+
+      <div class="imageContainer imageStorage width70 hidden">
+        <img src="images/007.png" alt="">
+      </div>
+
+      <div class="imageContainer imageStorage width70 hidden">
+        <img src="images/025.png" alt="">
+      </div>
+
+      <div class="imageContainer imageStorage width70 hidden">
+        <img src="images/039.png" alt="">
+      </div>
+
+      <div class="width15">
+        <i class="fas fa-angle-double-right fa-5x"></i>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <button class="switchButton switchButtonCurrent button1" data-view="button"></button>
+      <button class="switchButton button2" data-view="button"></button>
+      <button class="switchButton button3" data-view="button"></button>
+      <button class="switchButton button4" data-view="button"></button>
+      <button class="switchButton button5" data-view="button"></button>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
