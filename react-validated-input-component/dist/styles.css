@@ -1,0 +1,11 @@
+.passwordInput i {
+  margin-left: 0.5rem;
+}
+
+.fa-times {
+  color: red;
+}
+
+.fa-check {
+  color: green;
+}
