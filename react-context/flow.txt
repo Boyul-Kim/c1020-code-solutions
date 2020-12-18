@@ -1,9 +1,19 @@
-User can sign up: When the user reaches the site, the user can view swap from Sign In to Sign Up. Once the user enters
-their username and password, a POST request which will then hash the password and send it to the server and be stored in the database.
+User can sign up: When user opens the app, the page will render to the Auth page. When the user clicks on the Sign Up or Register now button,
+the route path will update using the parseRoute method defined in parse-route.js file. The parseRoute method is able to parse based on the href defined
+from the navbar.jsx file (since at sign up the user is null). Once the user enters a Username and Password, the form will submit when the Register button
+is clicked. Since the route is on Sign Up, the fetch call is sent to '/api/auth/sign-up' which is a POST method. This particular post method (after input validation)
+will hash the password. Then it will take the hashed password and query it to the database. Once queried, the result will be sent with a 201 status and User object created
+which contains UserId, Usernamme, and createdAt. The result will be go to the next promise chain in the fetch request and will check for the token and user object.
+Once passed, the hash will change to Sign In to sign up with newly created user account.
 
-User can sign in: When the user reaches the site, the user will enter their username and password. When Log In is selected,
-a POST request will be sent that will verify the correct username and password through the use of the token and payload. It will be sent to
-the database to be compared. Once validated, the homepage will render.
+User can sign in: When the user reaches the site, the user will enter their username and password. When Log In is selected, a fetch reqeust will be sent
+since the hash is on sign in, the '/api/auth/sign-in' route will be used in index.js. After input validation, a query will be sent to the database which
+is queryting UserId and hashedpassword. The password entered from user will be verified against the hashed password. If it matches, the server will respond
+with the token and payload. The next promise chain of the fetch reqeust will start and take the token and payload and fire the onSignIn property which is passed the
+handleSignIn method on auth.jsx. The handleSignIn is on app.jsx. The handleSignIn will store the token in localStorage of the browser.The page will render again
+but dispalying the homepage. This happens since on auth.jsx user is a truthy value (line 11), the hash value is '' which signifies the homepage.
+
 
 User can stay signed in: When ever the client makes a request in the app, the User context shared among the different components allow the user
-to stay logged in.
+to stay logged in -> componentDidMount on app.jsx will check for the token. if it is there in localStorage, the token will be decoded and the this.state.user will be updated.
+If not, user will be set to null. On home.jsx, it will check if user is not null. If not null, user can stay, else the user will be sent to sign in page.
