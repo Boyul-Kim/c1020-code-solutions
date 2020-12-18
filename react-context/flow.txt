@@ -1,0 +1,9 @@
+User can sign up: When the user reaches the site, the user can view swap from Sign In to Sign Up. Once the user enters
+their username and password, a POST request which will then hash the password and send it to the server and be stored in the database.
+
+User can sign in: When the user reaches the site, the user will enter their username and password. When Log In is selected,
+a POST request will be sent that will verify the correct username and password through the use of the token and payload. It will be sent to
+the database to be compared. Once validated, the homepage will render.
+
+User can stay signed in: When ever the client makes a request in the app, the User context shared among the different components allow the user
+to stay logged in.
