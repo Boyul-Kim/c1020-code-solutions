@@ -35,7 +35,7 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
   `;
   const params = [url, caption];
   db.query(sql, params)
-    .then(result => res.json(result.rows))
+    .then(result => res.status(201).json(result.rows[0]))
     .catch(err => next(err));
 });
 
